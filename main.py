@@ -6,9 +6,15 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
+@app.get("/metrics")
+def metrics():
+    return {"data": "Prometheus monitoring data"}
+
+
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8005)
