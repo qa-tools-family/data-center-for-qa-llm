@@ -1,3 +1,6 @@
 # This is the requirements file for the project. 
 # Please list all the dependencies required for the project here. 
 # The dependencies should be listed one per line in the format `package==version`.
+
+uvicorn==0.23.2
+fastapi==0.103.2
