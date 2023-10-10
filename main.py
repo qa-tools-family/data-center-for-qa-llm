@@ -11,6 +11,11 @@ def metrics():
     return {"data": "Prometheus monitoring data"}
 
 
+@app.get("/ok")
+def ok():
+    return {"message": "hello world"}
+
+
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
